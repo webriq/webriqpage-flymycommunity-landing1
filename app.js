@@ -56,6 +56,6 @@ module.exports = {
     minify: env === 'production'
   }),
   babel: jsStandards(),
-  vendor: ['assests/js/**'],
+  vendor: ['assets/js/**'],
   plugins: [collections, records]
 }
