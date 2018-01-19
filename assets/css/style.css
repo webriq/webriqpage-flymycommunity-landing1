@@ -482,3 +482,34 @@
     font-weight: 100;
   }
 } 
+
+
+@media(max-width:375px) {
+  .btnplay a { 
+    width: 55% !important; 
+  }
+  #about h1 { 
+    font-size: 30px;
+  }
+}
+
+@media(max-width:414px) {
+  #about p { 
+    padding: 0px 10px 0px 0px; 
+  }
+  #about h1 { 
+    font-size: 30px;
+  }
+}
+
+@media(max-width:360px) {
+  #btnslidebtns .sharebtn a { 
+    padding: 5px 5px 5px 5px; 
+  }
+  #btnslidebtns .sharebtn a svg{
+    padding:5px
+  }
+  #copyright .text-right {
+    padding:10px 70px;
+  }
+}
