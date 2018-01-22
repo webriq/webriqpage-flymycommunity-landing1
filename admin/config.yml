@@ -34,14 +34,9 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Website Description", name: "metadesc", widget: "string"}
               - {label: "Author", name: "metauthor", widget: "string"}
               - {label: "Keywords", name: "metakeyword", widget: "string"}
-              - {label: "Footer", name: "footer", widget: "markdown"}
-
-      - name: "content"
-        label: "Site Content"
-        file: "data/site.json"
-        description: "edit site setting"
-        fields:
-          - label: "Site Content Information"
+              - {label: "Footer", name: "footer", widget: "markdown"} 
+             
+          - label: "Content Information"
             name: "content"
             widget: "list"
             fields:
@@ -52,20 +47,17 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Slider Video Link", name: "sliderbg_video", widget: "string"}
               - {label: "Slider Title (Sub)", name: "slidertext1", widget: "string"}
               - {label: "Slider Title", name: "slidertext2", widget: "string"}
-              - {label: "Play Video Link", name: "poplink", widget: "string"}
+              - {label: "Play Video Link", name: "poplink", widget: "string"} 
 
-      - name: "about"
-        label: "About"
-        file: "data/site.json"
-        description: "edit about setting"
-        fields:
-          - label: "About Content Information"
+          - label: "About Information"
             name: "about"
             widget: "list"
             fields:      
               - {label: "About Background", name: "aboutbg", widget: "image", media_folder: "assets/img"}              
               - {label: "About Title", name: "abouttext1", widget: "string"} 
               - {label: "About Description", name: "abouttext2", widget: "string"} 
+
+
 
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Posts"  # Used in the UI, ie.: "New Post"
