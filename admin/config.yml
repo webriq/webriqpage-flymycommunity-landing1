@@ -36,6 +36,37 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Keywords", name: "metakeyword", widget: "string"}
               - {label: "Footer", name: "footer", widget: "markdown"}
 
+      - name: "content"
+        label: "Site Content"
+        file: "data/site.json"
+        description: "edit site setting"
+        fields:
+          - label: "Site Content Information"
+            name: "content"
+            widget: "list"
+            fields:
+              - {label: "Email", name: "email", widget: "string"}              
+              - {label: "Logo", name: "logo", widget: "image", media_folder: "assets/img"}              
+              - {label: "Contact Link", name: "linkcont", widget: "string"}
+              - {label: "Slider Background", name: "sliderbg", widget: "image", media_folder: "assets/img"}
+              - {label: "Slider Video Link", name: "sliderbg_video", widget: "string"}
+              - {label: "Slider Title (Sub)", name: "slidertext1", widget: "string"}
+              - {label: "Slider Title", name: "slidertext2", widget: "string"}
+              - {label: "Play Video Link", name: "poplink", widget: "string"}
+
+      - name: "about"
+        label: "About"
+        file: "data/site.json"
+        description: "edit about setting"
+        fields:
+          - label: "About Content Information"
+            name: "about"
+            widget: "list"
+            fields:      
+              - {label: "About Background", name: "aboutbg", widget: "image", media_folder: "assets/img"}              
+              - {label: "About Title", name: "abouttext1", widget: "string"} 
+              - {label: "About Description", name: "abouttext2", widget: "string"} 
+
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Posts"  # Used in the UI, ie.: "New Post"
     folder: "posts" # The path to the folder where the documents are stored
