@@ -28,9 +28,10 @@ collections: # A list of collections the CMS should be able to edit
             name: "sitedata"
             widget: "list"
             fields:
+              
+              - {label: "Site name", name: "sitename", widget: "string"}
               - {label: "Favicon", name: "icon", widget: "image", media_folder: "assets/img"}
               - {label: "Site Logo", name: "logo", widget: "image", media_folder: "assets/img"}
-              - {label: "Site name", name: "sitename", widget: "string"}
               - {label: "Website Description", name: "metadesc", widget: "string"}
               - {label: "Author", name: "metauthor", widget: "string"}
               - {label: "Keywords", name: "metakeyword", widget: "string"}
@@ -52,10 +53,10 @@ collections: # A list of collections the CMS should be able to edit
           - label: "About Information"
             name: "about"
             widget: "list"
-            fields:      
-              - {label: "About Background", name: "aboutbg", widget: "image", media_folder: "assets/img"}              
+            fields:                                  
               - {label: "About Title", name: "abouttext1", widget: "string"} 
               - {label: "About Description", name: "abouttext2", widget: "string"} 
+              - {label: "About Background", name: "aboutbg", widget: "image", media_folder: "assets/img"}
 
 
 
