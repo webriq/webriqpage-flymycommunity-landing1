@@ -44,11 +44,10 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Email", name: "email", widget: "string"}              
               - {label: "Logo", name: "logo", widget: "image", media_folder: "assets/img"}              
               - {label: "Contact Link", name: "linkcont", widget: "string"}
+              - {label: "Video ID", "name": "videoid", widget: "string"}
               - {label: "Slider Background", name: "sliderbg", widget: "image", media_folder: "assets/img"}
-              - {label: "Slider Video Link", name: "sliderbg_video", widget: "string"}
               - {label: "Slider Title (Sub)", name: "slidertext1", widget: "string"}
               - {label: "Slider Title", name: "slidertext2", widget: "string"}
-              - {label: "Play Video Link", name: "poplink", widget: "string"} 
 
           - label: "About Information"
             name: "about"
