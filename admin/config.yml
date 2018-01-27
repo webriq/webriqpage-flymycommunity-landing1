@@ -41,8 +41,8 @@ collections: # A list of collections the CMS should be able to edit
             name: "content"
             widget: "list"
             fields:
-              - {label: "Email", name: "email", widget: "string"}              
-              - {label: "Logo", name: "logo", widget: "image", media_folder: "assets/img"}              
+              - {label: "Email", name: "email", widget: "string", target: ".col.mail a", attr: ["mailto", "text"] }
+              - {label: "Logo", name: "logo", widget: "image", media_folder: "assets/img", target: ".col.mail a", attr: "src" }
               - {label: "Contact Link", name: "linkcont", widget: "string"}
               - {label: "Video ID", "name": "videoid", widget: "string"}
               - {label: "Slider Background", name: "sliderbg", widget: "image", media_folder: "assets/img"}
