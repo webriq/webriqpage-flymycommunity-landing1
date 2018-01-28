@@ -41,10 +41,10 @@ collections: # A list of collections the CMS should be able to edit
             name: "content"
             widget: "list"
             fields:
-              - {label: "Email", name: "email", widget: "string", target: ".col.mail a", attr: ["mailto", "text"] }
-              - {label: "Logo", name: "logo", widget: "image", media_folder: "assets/img", target: ".col.logo img", attr: "src" }
+              - {label: "Email", name: "email", widget: "string", dom_data: [{ target: ".col.mail a", attr: "mailto" }, { target: ".col.mail a", attr: "text" }]}
+              - {label: "Logo", name: "logo", widget: "image", media_folder: "assets/img", dom_data: [{ target: ".col.logo img", attr: "src" }]}
               - {label: "Contact Link", name: "linkcont", widget: "string"}
-              - {label: "Video ID", "name": "videoid", widget: "string"}
+              - {label: "Video ID", "name": "videoid", widget: "string", dom_data: [{ target: ".col.btnplay a", attr: "href", value_pattern: "//vimeo.com/{0}" }, { target: "#main-slider .video-foreground iframe", attr: "src", value_pattern: "https://player.vimeo.com/video/{0}?background=1" }]}
               - {label: "Slider Background", name: "sliderbg", widget: "image", media_folder: "assets/img"}
               - {label: "Slider Title (Sub)", name: "slidertext1", widget: "string"}
               - {label: "Slider Title", name: "slidertext2", widget: "string"}
