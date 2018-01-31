@@ -13,15 +13,18 @@
     </block>
 
     <!-- Social Media -->
-    <meta property="og:url" content='{{ site.sitedata[0].metakeyword }}'/>
-    <meta property="og:video" content="//vimeo.com/{{ site.content[0].videoid }}" />
-    <meta property="og:description" content='{{ site.sitedata[0].metadesc }}' />
-    <meta property="og:site_name" content='{{ site.sitedata[0].sitename }}' />
+    <meta property="og:url" content='https://vimeo.com/{{ site.content[0].videoid }}'/>
+    <meta property="og:video" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}" />
+    <meta property="og:description" content='{{ site.about[0].abouttext2 }}' />
+    <meta property="og:site_name" content='{{ site.about[0].abouttext1 }}' />
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content='{{ site.sitedata[0].sitename }}' />
-    <meta name="twitter:description" content='{{ site.sitedata[0].metadesc }}' />
-    <meta name="twitter:creator" content='{{ site.sitedata[0].metauthor }}' />
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@vimeo">
+    <meta name="twitter:title" content="{{ site.about[0].abouttext1 }}">
+    <meta name="twitter:description" content="{{ site.about[0].abouttext2 }}">
+    <meta name="twitter:player" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}">
+    <meta name="twitter:player:width" content="1280">
+    <meta name="twitter:player:height" content="720">
 
     <link rel="icon" href='{{ site.sitedata[0].icon }}' type="image/*" />
     <link rel="shortcut icon" href='{{ site.sitedata[0].icon }}' type="img/*" />
