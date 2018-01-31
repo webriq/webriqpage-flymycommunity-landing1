@@ -38,8 +38,8 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: "Your Email", name: "email", widget: "string", dom_data: [{ target: ".col.mail a", attr: "mailto" }, { target: ".col.mail a", attr: "text" }]}
-              - {label: "Your Contact Phone Number", name: "linkcont", widget: "string"}
-              - {label: "Video ID", "name": "videoid", widget: "string", dom_data: [{ target: ".col.btnplay a", attr: "href", value_pattern: "//vimeo.com/{0}" }, { target: "#main-slider .video-foreground iframe", attr: "src", value_pattern: "https://player.vimeo.com/video/{0}?background=1" }]}
+              - {label: "Your Contact Phone Number", name: "linkcont", widget: "string", dom_data: [{target: ".phone", attr: "href"}]}
+              - {label: "Video ID", "name": "videoid", widget: "string", dom_data: [{ target: ".col.btnplay a", attr: "href", value_pattern: "//vimeo.com/{0}" }, { target: "#main-slider .video-foreground iframe", attr: "src", value_pattern: "https://player.vimeo.com/video/{0}?background=1" },{"attr":"data-izimodal-iframeurl","target":".modais", "value_pattern":"//vimeo.com/{0}"}]}
               - {label: "Video Subheading", name: "slidertext1", widget: "string", dom_data: [{ target: ".video-subheading", attr: "text"}] }
               - {label: "Video Heading", name: "slidertext2", widget: "string", dom_data: [{ target: ".video-heading", attr: "text"}]}
 

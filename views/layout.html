@@ -3,13 +3,26 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='description' content='{{ metadesc }}'>
-    <meta name='keywords' content='{{ metakeywords }}'>
+    <meta name='description' content='{{ site.sitedata[0].metadesc }}'>
+    <meta name='keywords' content='{{ site.sitedata[0].metakeyword }}'>
+    <meta name='author' content='{{ site.sitedata[0].metauthor }}'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <block name='title'>
-      <title>Fly My Community - {{ site.content[0].slidertext2 }}</title>
+      <title>{{ site.sitedata[0].sitename }}</title>
     </block>
+
+    <!-- Social Media -->
+    <meta property="og:url" content='{{ site.sitedata[0].metakeyword }}'/>
+    <meta property="og:video" content="//vimeo.com/{{ site.content[0].videoid }}" />
+    <meta property="og:description" content='{{ site.sitedata[0].metadesc }}' />
+    <meta property="og:site_name" content='{{ site.sitedata[0].sitename }}' />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content='{{ site.sitedata[0].sitename }}' />
+    <meta name="twitter:description" content='{{ site.sitedata[0].metadesc }}' />
+    <meta name="twitter:creator" content='{{ site.sitedata[0].metauthor }}' />
+
     <link rel="icon" href='{{ site.sitedata[0].icon }}' type="image/*" />
     <link rel="shortcut icon" href='{{ site.sitedata[0].icon }}' type="img/*" />
     <link rel='stylesheet' href='css/index.css' />
@@ -29,7 +42,7 @@
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/bs-animation.js"></script>
-      <script src="js/index.js"></script>      
+      <script src="js/index.js"></script>
       <script src="https://cdn.rawgit.com/webriq/update_elements/master/index.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
