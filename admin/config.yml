@@ -28,64 +28,24 @@ collections: # A list of collections the CMS should be able to edit
             name: "sitedata"
             widget: "list"
             fields:
-              
-              - {label: "Site name", name: "sitename", widget: "string"}
-              - {label: "Favicon", name: "icon", widget: "image", media_folder: "assets/img"}
-              - {label: "Site Logo", name: "logo", widget: "image", media_folder: "assets/img"}
-              - {label: "Website Description", name: "metadesc", widget: "string"}
-              - {label: "Author", name: "metauthor", widget: "string"}
-              - {label: "Keywords", name: "metakeyword", widget: "string"}
-              - {label: "Footer", name: "footer", widget: "markdown"} 
-             
+              - {label: "Website Title", name: "sitename", widget: "string"}
+              - {label: "Website Meta Description", name: "metadesc", widget: "string"}
+              - {label: "Website Meta Keywords", name: "metakeyword", widget: "string"}
+              - {label: "Website Author", name: "metauthor", widget: "string"}
+
           - label: "Content Information"
             name: "content"
             widget: "list"
             fields:
-              - {label: "Email", name: "email", widget: "string", dom_data: [{ target: ".col.mail a", attr: "mailto" }, { target: ".col.mail a", attr: "text" }]}
-              - {label: "Logo", name: "logo", widget: "image", media_folder: "assets/img", dom_data: [{ target: ".col.logo img", attr: "src" }]}
-              - {label: "Contact Link", name: "linkcont", widget: "string"}
+              - {label: "Your Email", name: "email", widget: "string", dom_data: [{ target: ".col.mail a", attr: "mailto" }, { target: ".col.mail a", attr: "text" }]}
+              - {label: "Your Contact Phone Number", name: "linkcont", widget: "string"}
               - {label: "Video ID", "name": "videoid", widget: "string", dom_data: [{ target: ".col.btnplay a", attr: "href", value_pattern: "//vimeo.com/{0}" }, { target: "#main-slider .video-foreground iframe", attr: "src", value_pattern: "https://player.vimeo.com/video/{0}?background=1" }]}
-              - {label: "Slider Background", name: "sliderbg", widget: "image", media_folder: "assets/img"}
-              - {label: "Slider Title (Sub)", name: "slidertext1", widget: "string"}
-              - {label: "Slider Title", name: "slidertext2", widget: "string"}
+              - {label: "Video Subheading", name: "slidertext1", widget: "string", dom_data: [{ target: ".video-subheading", attr: "text"}] }
+              - {label: "Video Heading", name: "slidertext2", widget: "string", dom_data: [{ target: ".video-heading", attr: "text"}]}
 
           - label: "About Information"
             name: "about"
             widget: "list"
-            fields:                                  
-              - {label: "About Title", name: "abouttext1", widget: "string"} 
-              - {label: "About Description", name: "abouttext2", widget: "string"} 
-              - {label: "About Background", name: "aboutbg", widget: "image", media_folder: "assets/img"}
-
-
-
-  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Posts"  # Used in the UI, ie.: "New Post"
-    folder: "posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Short Description", name: "shortdesc", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-    meta: # Meta data fields. Just like fields, but without any preview element
-      - {label: "Publish Date", name: "date", widget: "date"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Tags", name: "leadtag", widget: "string"}
-      - {label: "Meta Description", name: "metadesc", widget: "string"}
-      - {label: "Meta Keywords", name: "metakeywords", widget: "string"}
-      - {label: "Banner", name: "banner", widget: "image", class: "image thumbnail", media_folder: "assets/img/uploads"}
-
-  - name: "filemanager"
-    label: "File Manager"
-    files:
-      - name: "filemanager"
-        label: "File Manager"
-        file: "data/files.json"
-        description: "Add file(image,doc,pdf) here"
-        fields:
-          - label: "File Manager"
-            name: "filemanager"
-            widget: "list"
             fields:
-              - {label: "File Name", name: "name", widget: "string"}
-              - {label: "File Type", name: "file", widget: "image", media_folder: "assets/uploads"}
+              - {label: "Video Title", name: "abouttext1", widget: "string", dom_data: [{ target: ".video-title", attr: "text"}]}
+              - {label: "Video Description", name: "abouttext2", widget: "string", dom_data: [{ target: ".video-description", attr: "text"}]}

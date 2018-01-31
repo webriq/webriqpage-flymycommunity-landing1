@@ -8,9 +8,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <block name='title'>
-      <title>Fly My Community - Video Landing</title>
+      <title>Fly My Community - {{ site.content[0].slidertext2 }}</title>
     </block>
-
+    <link rel="icon" href='{{ site.sitedata[0].icon }}' type="image/*" />
+    <link rel="shortcut icon" href='{{ site.sitedata[0].icon }}' type="img/*" />
     <link rel='stylesheet' href='css/index.css' />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
@@ -25,18 +26,16 @@
     </main>
 
     <block name='javascript'>
-      <script src='js/main.js' defer></script>
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      <script src="js/modal.js"></script>
       <script src="js/bs-animation.js"></script>
-      <script src="js/custom.js"></script>
-      <script src="https://rawgit.com/webriq/update_elements/master/index.js"></script>
+      <script src="js/index.js"></script>      
+      <script src="https://cdn.rawgit.com/webriq/update_elements/master/index.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.js"></script>
       <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8"></script>
-      
+
       <script type="text/javascript">
         // Bind as an event handler
         $(document).on('click', '#one', lity);

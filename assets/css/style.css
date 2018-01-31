@@ -153,6 +153,7 @@
 
 .video-background {
   background:#000;
+  background-size: cover;
   position:fixed;
   top:0;
   right:0;
@@ -291,31 +292,31 @@
 
 @media(max-width:1024px) {
   body .btnplay {
-    max-width:33% !important; 
+    max-width:33% !important;
   }
-  .addthis_inline_share_toolbox_7weq .at-share-btn-elements:before { 
-    left: 120px; 
+  .addthis_inline_share_toolbox_7weq .at-share-btn-elements:before {
+    left: 120px;
   }
   #about {
-    padding: 150px 0px; 
+    padding: 150px 0px;
     background: #202020 url(/img/aboutfly_bg.png) no-repeat right  !important;
   }
 
 }
 
 @media(max-width:768px) {
-  #main-slider { 
-    padding: 50px 0; 
+  #main-slider {
+    padding: 50px 0;
   }
   #menu .mail p a, #menu .mail p {
     font-size:12px
   }
   #menu .conts a {
-    padding: 13px 20px 13px 0px; 
+    padding: 13px 20px 13px 0px;
     font-size:14px
   }
   #menu .conts a span {
-    padding: 13px 2px 13px 10px; 
+    padding: 13px 2px 13px 10px;
   }
   #menu .mail svg {
     display: inline-block;
@@ -328,25 +329,25 @@
     max-width:13% !important;
   }
   #btnslidebtns .btnplay a {
-    color: #fff; 
+    color: #fff;
     width: auto;
-    padding: 8px 18px 18px 15px; 
+    padding: 8px 18px 18px 15px;
     font-size:0px;
-    height:50px;    
+    height:50px;
   }
   #btnslidebtns .btnplay svg {
     width:35px !important;
     height:35px !important;
   }
-  .addthis_inline_share_toolbox_7weq .at-share-btn-elements:before { 
-    font-size: 13px;  
+  .addthis_inline_share_toolbox_7weq .at-share-btn-elements:before {
+    font-size: 13px;
     left: 150px;
     top: 25px;
   }
-  #main-slider { 
+  #main-slider {
     min-height: 470px;
   }
-  body #about .col:nth-child(1) { 
+  body #about .col:nth-child(1) {
     min-width:70% !important
   }
   #about {
@@ -354,7 +355,7 @@
   }
   #copyright .col {
     min-width:100%;
-    text-align:center !important; 
+    text-align:center !important;
   }
 }
 
@@ -362,22 +363,22 @@
   #slider-content  {
     text-align:center !important;
   }
-  #slider-content span { 
-    font-size: 18px; 
+  #slider-content span {
+    font-size: 18px;
     font-weight: 100 !important;
   }
-  #slider-content h1 { 
-    font-size: 40px; 
+  #slider-content h1 {
+    font-size: 40px;
   }
   #main-slider {
     padding: 50px 0;
   }
   .mail a {
-    font-size:0px !important;  
+    font-size:0px !important;
   }
   .mail a svg{
     float:none !important;
-    border:solid 1px; 
+    border:solid 1px;
     border-radius:30px;
     min-width:50px !important;
     min-height:50px !important;
@@ -398,7 +399,7 @@
   .btnplay a{
     font-size:18px !important;
     width:40% !important;
-    margin:auto;  
+    margin:auto;
     height:60px !important;
     padding-top:15px !important;
   }
@@ -427,10 +428,10 @@
   }
 
   #menu.fixed .mail {
-    padding: 10px 0px 0px; 
+    padding: 10px 0px 0px;
   }
   .menusec.fixed .logo img {
-    width: 150px; 
+    width: 150px;
   }
 
   #menu.fixed .conts a {
@@ -481,30 +482,30 @@
     line-height: 1.6em;
     font-weight: 100;
   }
-} 
+}
 
 
 @media(max-width:375px) {
-  .btnplay a { 
-    width: 55% !important; 
+  .btnplay a {
+    width: 55% !important;
   }
-  #about h1 { 
+  #about h1 {
     font-size: 30px;
   }
 }
 
 @media(max-width:414px) {
-  #about p { 
-    padding: 0px 10px 0px 0px; 
+  #about p {
+    padding: 0px 10px 0px 0px;
   }
-  #about h1 { 
+  #about h1 {
     font-size: 30px;
   }
 }
 
 @media(max-width:360px) {
-  #btnslidebtns .sharebtn a { 
-    padding: 5px 5px 5px 5px; 
+  #btnslidebtns .sharebtn a {
+    padding: 5px 5px 5px 5px;
   }
   #btnslidebtns .sharebtn a svg{
     padding:5px
