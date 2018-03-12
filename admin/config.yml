@@ -32,8 +32,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Website Meta Description", name: "metadesc", widget: "string"}
               - {label: "Website Meta Keywords", name: "metakeyword", widget: "string"}
               - {label: "Website Author", name: "metauthor", widget: "string"}
-              - {label: "Website Logo", name: "logo", widget: "image", media_folder: "assets/img"}
-              - {label: "Website Logo Name", name: "logoname", widget: "string", dom_data: [{ target: ".logo h2", attr: "text"}] }
+              - {label: "Website Logo", name: "logo", widget: "image", media_folder: "assets/img", dom_data: [{ target: ".logo img", attr: "src"}]}
+
 
           - label: "Content Information"
             name: "content"
