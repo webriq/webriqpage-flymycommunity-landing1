@@ -54,10 +54,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.js"></script>
-      <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8"></script>
 
       <script type="text/javascript">
-        // Bind as an event handler
+        // Bind as an event handlerS
         $(document).on('click', '#one', lity);
         $.ajax({
             type:'GET',
@@ -67,10 +66,11 @@
             success: function(data){
                 var thumbnail_src = data[0].thumbnail_large;
                 $('<meta property="og:image" content="'+ thumbnail_src +'" />').insertAfter('meta[property="og:site_name"]');
+
             }
         });
       </script>
-
+      <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8"></script>
     </block>
   </body>
 </html>
