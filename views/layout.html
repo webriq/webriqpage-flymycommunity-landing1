@@ -56,20 +56,31 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.js"></script>
 
+
       <script type="text/javascript">
         // Bind as an event handlerS
         $(document).on('click', '#one', lity);
-        $.ajax({
-            type:'GET',
-            url: 'https://vimeo.com/api/v2/video/' + {{ site.content[0].videoid }} + '.json',
-            jsonp: 'callback',
-            dataType: 'jsonp',
-            success: function(data){
-                var thumbnail_src = data[0].thumbnail_large;
-                $('<meta property="og:image" content="'+ thumbnail_src +'" />').insertAfter('meta[property="og:site_name"]');
 
-            }
-        });
+      </script>
+      <script type="text/javascript">       
+
+        var addthis_share = {
+          title: "{{site.content[0].slidertext2}}",
+          description: "{{site.about[0].abouttext2}}",
+          media: imageLoader()
+        }
+        function imageLoader(){
+          var dd = "";
+          $.ajax({
+              type:'GET',
+              url: 'https://vimeo.com/api/v2/video/' + {{ site.content[0].videoid }} + '.json',
+              async: false,
+              success: function(e){
+                  dd = e[0].thumbnail_large
+              }
+          });
+          return dd;
+        }
       </script>
       <script type="text/javascript">
         function downloadJSAtOnload() {
