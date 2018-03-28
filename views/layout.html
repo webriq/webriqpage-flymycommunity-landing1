@@ -45,7 +45,6 @@
     <main id='{{ pageId }}'>
       <block name='content'></block>
     </main>
-
     <block name='javascript'>
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
@@ -60,6 +59,16 @@
       <script type="text/javascript">
         // Bind as an event handler
         $(document).on('click', '#one', lity);
+        $.ajax({
+            type:'GET',
+            url: 'https://vimeo.com/api/v2/video/' + {{ site.content[0].videoid }} + '.json',
+            jsonp: 'callback',
+            dataType: 'jsonp',
+            success: function(data){
+                var thumbnail_src = data[0].thumbnail_large;
+                $('<meta property="og:image" content="'+ thumbnail_src +'" />').insertAfter('meta[property="og:site_name"]');
+            }
+        });
       </script>
 
     </block>
