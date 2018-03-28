@@ -14,23 +14,24 @@
 
     <!-- Social Media -->
 
-    <meta property="og:type" content='article' />
+    <!-- <meta property="og:type" content='article' />
     <meta property="og:description" content='{{ site.about[0].abouttext2 }}' />
     <meta property="og:site_name" content='{{ site.about[0].abouttext1 }}' />
     <meta property="og:title" content='{{ site.about[0].abouttext1 }}' />
+    <meta property="og:image" content=""/> -->
 
     <!-- <meta property="og:url" content='https://vimeo.com/{{ site.content[0].videoid }}'/>
     <meta property="og:video" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}" />
     <meta property="og:description" content='{{ site.about[0].abouttext2 }}' />
     <meta property="og:site_name" content='{{ site.about[0].abouttext1 }}' /> -->
 
-    <meta name="twitter:card" content="player">
+    <!-- <meta name="twitter:card" content="player">
     <meta name="twitter:site" content="@vimeo">
     <meta name="twitter:title" content="{{ site.about[0].abouttext1 }}">
     <meta name="twitter:description" content="{{ site.about[0].abouttext2 }}">
     <meta name="twitter:player" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}">
     <meta name="twitter:player:width" content="1280">
-    <meta name="twitter:player:height" content="720">
+    <meta name="twitter:player:height" content="720"> -->
 
     <link rel="icon" href='{{ site.sitedata[0].icon }}' type="image/*" />
     <link rel="shortcut icon" href='{{ site.sitedata[0].icon }}' type="img/*" />
@@ -62,7 +63,7 @@
         $(document).on('click', '#one', lity);
 
       </script>
-      <script type="text/javascript">       
+      <script type="text/javascript">
 
         var addthis_share = {
           title: "{{site.content[0].slidertext2}}",
@@ -77,6 +78,7 @@
               async: false,
               success: function(e){
                   dd = e[0].thumbnail_large
+                  // $('head').append('<meta property="og:image" content="'+e[0].thumbnail_large+'"/>')
               }
           });
           return dd;
