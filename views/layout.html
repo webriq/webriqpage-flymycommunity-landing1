@@ -18,7 +18,6 @@
     <meta property="og:description" content='{{ site.about[0].abouttext2 }}' />
     <meta property="og:site_name" content='{{ site.about[0].abouttext1 }}' />
     <meta property="og:title" content='{{ site.about[0].abouttext1 }}' />
-    <meta property="og:image" content="https://i.vimeocdn.com/video/676821682_640.jpg"/>
 
     <!-- <meta property="og:url" content='https://vimeo.com/{{ site.content[0].videoid }}'/>
     <meta property="og:video" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}" />
@@ -65,11 +64,11 @@
       </script>
       <script type="text/javascript">
 
-        var addthis_share = {
-          title: "{{site.about[0].abouttext1}}",
-          description: "{{site.about[0].abouttext2}}",
-          media: imageLoader()
-        }
+        // var addthis_share = {
+        //   title: "{{site.about[0].abouttext1}}",
+        //   description: "{{site.about[0].abouttext2}}",
+        //   media: imageLoader()
+        // }
         function imageLoader(){
           var dd = "";
           $.ajax({
@@ -80,13 +79,25 @@
                   dd = e[0].thumbnail_large
                   $('body').find('.share-image').attr('src', dd)
                   $('head').find('meta[property="og:image"]').attr('content', dd)
-                  // $('head').append('<meta property="og:image" content="'+e[0].thumbnail_large+'"/>')
+                  $('head').append('<meta property="og:image" content="'+e[0].thumbnail_large+'"/>')
+
+                  function downloadJSAtOnload() {
+                  var element = document.createElement("script");
+                  element.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8";
+                  document.body.appendChild(element);
+                  }
+                  if (window.addEventListener)
+                    window.addEventListener("load", downloadJSAtOnload, false);
+                  else if (window.attachEvent)
+                    window.attachEvent("onload", downloadJSAtOnload);
+                  else window.onload = downloadJSAtOnload;
               }
           });
           return dd;
         }
+        imageLoader();
       </script>
-      <script type="text/javascript">
+      <!-- <script type="text/javascript">
         function downloadJSAtOnload() {
         var element = document.createElement("script");
         element.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8";
@@ -97,7 +108,7 @@
         else if (window.attachEvent)
           window.attachEvent("onload", downloadJSAtOnload);
         else window.onload = downloadJSAtOnload;
-      </script>
+      </script> -->
     </block>
   </body>
 </html>
