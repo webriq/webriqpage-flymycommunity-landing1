@@ -14,11 +14,11 @@
 
     <!-- Social Media -->
 
-    <!-- <meta property="og:type" content='article' />
+    <meta property="og:type" content='article' />
     <meta property="og:description" content='{{ site.about[0].abouttext2 }}' />
     <meta property="og:site_name" content='{{ site.about[0].abouttext1 }}' />
     <meta property="og:title" content='{{ site.about[0].abouttext1 }}' />
-    <meta property="og:image" content=""/> -->
+    <meta property="og:image" content=""/>
 
     <!-- <meta property="og:url" content='https://vimeo.com/{{ site.content[0].videoid }}'/>
     <meta property="og:video" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}" />
@@ -66,7 +66,7 @@
       <script type="text/javascript">
 
         var addthis_share = {
-          title: "{{site.content[0].slidertext2}}",
+          title: "{{site.about[0].abouttext1}}",
           description: "{{site.about[0].abouttext2}}",
           media: imageLoader()
         }
@@ -78,6 +78,8 @@
               async: false,
               success: function(e){
                   dd = e[0].thumbnail_large
+                  $('body').find('.share-image').attr('src', dd)
+                  $('head').find('meta[property="og:image"]').attr('content', dd)
                   // $('head').append('<meta property="og:image" content="'+e[0].thumbnail_large+'"/>')
               }
           });
