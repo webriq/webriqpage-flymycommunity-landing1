@@ -18,19 +18,15 @@
     <meta property="og:description" content='{{ site.about[0].abouttext2 }}' />
     <meta property="og:site_name" content='{{ site.about[0].abouttext1 }}' />
     <meta property="og:title" content='{{ site.about[0].abouttext1 }}' />
+    <meta property="og:image" content='{{ video.url }}' />
 
-    <!-- <meta property="og:url" content='https://vimeo.com/{{ site.content[0].videoid }}'/>
-    <meta property="og:video" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}" />
-    <meta property="og:description" content='{{ site.about[0].abouttext2 }}' />
-    <meta property="og:site_name" content='{{ site.about[0].abouttext1 }}' /> -->
-
-    <!-- <meta name="twitter:card" content="player">
+    <meta name="twitter:card" content="player">
     <meta name="twitter:site" content="@vimeo">
     <meta name="twitter:title" content="{{ site.about[0].abouttext1 }}">
     <meta name="twitter:description" content="{{ site.about[0].abouttext2 }}">
     <meta name="twitter:player" content="https://player.vimeo.com/video/{{ site.content[0].videoid }}">
     <meta name="twitter:player:width" content="1280">
-    <meta name="twitter:player:height" content="720"> -->
+    <meta name="twitter:player:height" content="720">
 
     <link rel="icon" href='{{ site.sitedata[0].icon }}' type="image/*" />
     <link rel="shortcut icon" href='{{ site.sitedata[0].icon }}' type="img/*" />
@@ -63,42 +59,6 @@
 
       </script>
       <script type="text/javascript">
-
-        // var addthis_share = {
-        //   title: "{{site.about[0].abouttext1}}",
-        //   description: "{{site.about[0].abouttext2}}",
-        //   media: imageLoader()
-        // }
-        function imageLoader(){
-          var dd = "";
-          $.ajax({
-              type:'GET',
-              url: 'https://vimeo.com/api/v2/video/' + {{ site.content[0].videoid }} + '.json',
-              async: false,
-              success: function(e){
-                  dd = e[0].thumbnail_large
-                  $('body').find('.share-image').attr('src', dd)
-                  $('head').find('meta[property="og:image"]').attr('content', dd)
-                  $('head').append('<meta property="og:image" content="'+e[0].thumbnail_large+'"/>')
-              },
-              complete: function(){
-                function downloadJSAtOnload() {
-                  var element = document.createElement("script");
-                  element.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8";
-                  document.body.appendChild(element);
-                }
-                if (window.addEventListener)
-                window.addEventListener("load", downloadJSAtOnload, false);
-                else if (window.attachEvent)
-                window.attachEvent("onload", downloadJSAtOnload);
-                else window.onload = downloadJSAtOnload;
-              }
-          });
-          return dd;
-        }
-        imageLoader();
-      </script>
-      <!-- <script type="text/javascript">
         function downloadJSAtOnload() {
         var element = document.createElement("script");
         element.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8";
@@ -109,7 +69,7 @@
         else if (window.attachEvent)
           window.attachEvent("onload", downloadJSAtOnload);
         else window.onload = downloadJSAtOnload;
-      </script> -->
+      </script>
     </block>
   </body>
 </html>
