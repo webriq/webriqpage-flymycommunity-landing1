@@ -77,7 +77,7 @@
       function eventHandler(evt) {
         if (evt.type == 'addthis.menu.share') {
           console.log(evt.data.service);
-          _paq.push(['trackEvent', 'Contact Header Links', 'click-' + evt.data.service]);
+          _paq.push(['trackEvent', 'Social Share', 'click-' + evt.data.service]);
         }
       }
       // Listen to various events
@@ -88,7 +88,7 @@
       var player = new Vimeo.Player(iframe);
       player.on('play', function() {
         console.log("Video played");
-        _paq.push(['trackEvent', 'Contact Header Links', 'contact-via-phone']);
+        _paq.push(['trackEvent', 'Video', 'play']);
       });
       //- Vimeo tracking end
     </script>
