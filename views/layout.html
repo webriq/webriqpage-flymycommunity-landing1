@@ -45,7 +45,7 @@
     (function() {
       var u="//stats.webriq.com/";
       _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', '2']);
+      _paq.push(['setSiteId', location.hostname]);
       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
       g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
     })();
@@ -73,18 +73,11 @@
       $(document).on('click', '#one', lity);
     </script>
     <script type="text/javascript">
-    function onLoadGA(cb) {
-      if (typeof ga === 'function') {
-        cb();
-      } else {
-        setTimeout(onLoadGA, 500);
-      }
-    }
-    onLoadGA(function() {
       //+ AddThis tracking start
       function eventHandler(evt) {
         if (evt.type == 'addthis.menu.share') {
-          ga('send', { hitType: 'event', eventCategory: 'Social Share', eventAction: `click-${evt.data.service}` });
+          console.log(evt.data.service);
+          _paq.push(['trackEvent', 'Contact Header Links', 'click-' + evt.data.service]);
         }
       }
       // Listen to various events
@@ -95,11 +88,9 @@
       var player = new Vimeo.Player(iframe);
       player.on('play', function() {
         console.log("Video played");
-        ga('send', { hitType: 'event', eventCategory: 'Video', eventAction: `play` });
+        _paq.push(['trackEvent', 'Contact Header Links', 'contact-via-phone']);
       });
       //- Vimeo tracking end
-    });
-
     </script>
   </block>
 </body>
