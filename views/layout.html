@@ -78,7 +78,6 @@
       //+ AddThis tracking start
       function eventHandler(evt) {
         if (evt.type == 'addthis.menu.share') {
-          console.log(evt.data.service);
           _paq.push(['trackEvent', 'Social Share', 'click-' + evt.data.service]);
         }
       }
@@ -89,7 +88,6 @@
       var iframe = document.querySelector('iframe');
       var player = new Vimeo.Player(iframe);
       player.on('play', function() {
-        console.log("Video played");
         _paq.push(['trackEvent', 'Video', 'play']);
       });
       //- Vimeo tracking end
