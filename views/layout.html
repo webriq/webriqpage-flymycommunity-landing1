@@ -91,6 +91,14 @@
         _paq.push(['trackEvent', 'Video', 'play']);
       });
       //- Vimeo tracking end
+      // Contact Headers Start
+      $(".mail a").off("click").on("click", function() {
+        _paq.push(['trackEvent', 'Contact Header Links', 'contact-via-email']);
+      });
+      $("a.phone").off("click").on("click", function() {
+        _paq.push(['trackEvent', 'Contact Header Links', 'contact-via-phone']);
+      });
+      // Contact Headers End
     </script>
   </block>
 </body>
