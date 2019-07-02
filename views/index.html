@@ -144,15 +144,15 @@
                   <p><span class="text-blue">Position:</span> {{bio.position}}</p>
                   <p><span class="text-blue">Specialties:</span> {{bio.specialties}}</p>
                   <p><span class="text-blue">License No.:</span> {{bio.license}}</p>
-                  <p><span class="text-blue">Address:</span> {{bio.address}}</p>
                 </div>
                 <hr/>
                 <p class="text-blue mb-2">Biography</p>
                 <p class="pb-3">{{bio.description}}</p>
                 <hr/>
+                <p class="pl-4"><i class="fas fa-map-marker-alt text-blue"></i> {{bio.address}}</p>
                 <p><a href="tel:{{bio.phonenumber}}"><i class="fas fa-mobile-alt"></i>{{bio.phonenumber}}</a></p>
                 <p><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
-                <p><a href="/" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
+                <p><a href="//{{bio.website}}" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
                 <div class="social my-2">
                   <a href="{{bio.facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                   <a href="{{bio.instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
