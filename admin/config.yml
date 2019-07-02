@@ -51,3 +51,35 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Video Title", name: "abouttext1", placeholder_text: "Edit video title", default_text: "Crystal Park - FMC ", widget: "string", dom_data: [{ target: ".video-title", attr: "text"}]}
               - {label: "Video Description", name: "abouttext2", placeholder_text: "Edit video description", default_text: "Crystal Park is a private gated mountain community within the Pikes Peak region. Located above Colorado Springs and adjacent to Manitou Springs.....", widget: "string", dom_data: [{ target: ".video-description", attr: "text"}]}
+  - name: "biography"
+    label: "Agent Biography"
+    create: false
+    files:
+      - name: "biography"
+        label: "Agent Biography"
+        file: "data/site.json"
+        description: "edit agent biography"
+        fields:
+          - label: "Agent Biography"
+            name: "biography"
+            widget: "list"
+            fields:
+              - {label: "Id", name: "num", widget: "number"}
+              - {label: "Profile Image", name: "image", widget: "image", media_folder: "assets/img"}
+              - {label: "Agent Name", name: "fullname", widget: "string"}
+              - {label: "Position", name: "position", widget: "string"}
+              - {label: "Specialties", name: "specialties", widget: "string"}
+              - {label: "License", name: "license", widget: "string"}
+              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Phone Number", name: "phonenumber", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Website", name: "website", widget: "string"}
+              - {label: "Facebook", name: "facebook", widget: "string"}
+              - {label: "Instagram", name: "instagram", widget: "string"}
+              - {label: "Pinterest", name: "pinterest", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string"}
+              - {label: "Linkedin", name: "linkedin", widget: "string"}
+              - {label: "Shortdesc", name: "shortdesc", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
+
+              
